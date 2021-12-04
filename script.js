@@ -54,15 +54,51 @@
 // };
 
 //Arrow function
-const calcAge3 = (birthYear) => 2037 - birthYear;
-const age3 = calcAge3(1991);
-console.log(age3);
+// const calcAge3 = (birthYear) => 2037 - birthYear;
+// const age3 = calcAge3(1991);
+// console.log(age3);
 
-const yearsUntilRetirement = (birthYear, firstName) => {
-  const age = 2037 - birthYear;
-  const retirement = 65 - age;
-  return `${firstName} retires in ${retirement} years`;
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//   const age = 2037 - birthYear;
+//   const retirement = 65 - age;
+//   return `${firstName} retires in ${retirement} years`;
+// };
+
+// console.log(yearsUntilRetirement(1991, `Jonas`));
+// console.log(yearsUntilRetirement(1980, `Bob`));
+
+// const cutPieces = function (fruit) {
+//   return fruit * 4;
+// };
+
+// const fruitProcessor = function (apples, oranges) {
+//   const applePieces = cutPieces(apples);
+//   const orangePieces = cutPieces(oranges);
+
+//   const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} piece of orange.`;
+//   return juice;
+// };
+
+// console.log(fruitProcessor(2, 3));
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
 };
 
-console.log(yearsUntilRetirement(1991, `Jonas`));
-console.log(yearsUntilRetirement(1980, `Bob`));
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} years`);
+    return retirement;
+  } else {
+    console.log(`${firstName} has already retired~:D`);
+    return -1;
+  }
+
+  // return ;
+};
+
+console.log(yearsUntilRetirement(1991, "Jonas"));
+console.log(yearsUntilRetirement(1950, "Mike"));
