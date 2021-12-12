@@ -265,42 +265,81 @@ const jonasArray = [
 
 console.log(jonasArray);*/
 
-const jonas = {
-  firstName: "Jonas",
-  lastName: "Schmedtmann",
-  age: 2037 - 1991,
-  job: "teacher",
-  friends: ["Michael", "Peter", "Steven"],
-};
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   age: 2037 - 1991,
+//   job: "teacher",
+//   friends: ["Michael", "Peter", "Steven"],
+// };
 
-console.log(jonas);
+// console.log(jonas);
 
-console.log(jonas.lastName);
-console.log(jonas["lastName"]);
+// console.log(jonas.lastName);
+// console.log(jonas["lastName"]);
 
-const nameKey = "Name";
-console.log(jonas["first" + nameKey]);
-console.log(jonas["last" + nameKey]);
+// const nameKey = "Name";
+// console.log(jonas["first" + nameKey]);
+// console.log(jonas["last" + nameKey]);
 
-const interestedIn = prompt(
-  "What do you want to know about Jonas? Choose between firstName, lastName, age, job, friends "
-);
+// const interestedIn = prompt(
+//   "What do you want to know about Jonas? Choose between firstName, lastName, age, job, friends "
+// );
 
-if (jonas[interestedIn]) {
-  console.log(jonas[interestedIn]);
-} else {
-  console.log(
-    "Wrong request!Choose between firstName, lastName, age, job, friends"
-  );
-}
+// if (jonas[interestedIn]) {
+//   console.log(jonas[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong request!Choose between firstName, lastName, age, job, friends"
+//   );
+// }
 
-jonas.location = "Portugal";
-jonas["twitter"] = "@jonasschmedtman";
-console.log(jonas);
+// jonas.location = "Portugal";
+// jonas["twitter"] = "@jonasschmedtman";
+// console.log(jonas);
 
 //Challenge
 //"Jonas has 3 freinds, and his best friend is called Michael"
 
-console.log(
-  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
-);
+// console.log(
+//   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+// );
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   // console.log(this);
+  //   return 2037 - this.birthYear;
+  // }
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      jonas.job
+    }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's licenses`;
+  },
+};
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+//Challenge
+//"Jonas is a 46-year old teacher, and he has a driver's license"
+
+console.log(jonas.getSummary());
