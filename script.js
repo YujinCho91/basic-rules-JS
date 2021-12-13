@@ -407,6 +407,29 @@ John weights 92 kg and is 1.95 m tall.
 // console.log("Lifting weights repetition 10");
 
 // for loop keeps running while condition is TRUE
-for (let rep = 1; rep <= 10; rep++) {
-  console.log(`Lifting weights repetition ${rep}`);
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep}`);
+// }
+
+const jonasArray = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+  true,
+];
+
+const types = [];
+
+// console.log(jonas[0])
+// console.log(jonas[1])
+// ...
+// console.log(jonas[4])
+// jonas[5] does NOT exist
+
+for (let i = 0; i < jonasArray.length; i++) {
+  console.log(jonasArray[i], typeof jonasArray[i]);
+
+  types[i] = typeof jonas[i];
 }
