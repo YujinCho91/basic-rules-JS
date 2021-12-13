@@ -305,44 +305,44 @@ console.log(jonasArray);*/
 //   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
 // );
 
-const jonas = {
-  firstName: "Jonas",
-  lastName: "Schmedtmann",
-  birthYear: 1991,
-  job: "teacher",
-  friends: ["Michael", "Peter", "Steven"],
-  hasDriversLicense: true,
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   birthYear: 1991,
+//   job: "teacher",
+//   friends: ["Michael", "Peter", "Steven"],
+//   hasDriversLicense: true,
 
-  // calcAge: function (birthYear) {
-  //   return 2037 - birthYear;
-  // },
+//   // calcAge: function (birthYear) {
+//   //   return 2037 - birthYear;
+//   // },
 
-  // calcAge: function () {
-  //   // console.log(this);
-  //   return 2037 - this.birthYear;
-  // }
-  calcAge: function () {
-    this.age = 2037 - this.birthYear;
-    return this.age;
-  },
+//   // calcAge: function () {
+//   //   // console.log(this);
+//   //   return 2037 - this.birthYear;
+//   // }
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYear;
+//     return this.age;
+//   },
 
-  getSummary: function () {
-    return `${this.firstName} is a ${this.calcAge()}-year old ${
-      jonas.job
-    }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's licenses`;
-  },
-};
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()}-year old ${
+//       jonas.job
+//     }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's licenses`;
+//   },
+// };
 
-console.log(jonas.calcAge());
+// console.log(jonas.calcAge());
 
-console.log(jonas.age);
-console.log(jonas.age);
-console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
 
-//Challenge
-//"Jonas is a 46-year old teacher, and he has a driver's license"
+// //Challenge
+// //"Jonas is a 46-year old teacher, and he has a driver's license"
 
-console.log(jonas.getSummary());
+// console.log(jonas.getSummary());
 
 /*
 Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! 
@@ -360,37 +360,53 @@ Test data: Marks weights 78 kg and is 1.69 m tall.
 John weights 92 kg and is 1.95 m tall.
 */
 
-const markMiller = {
-  fullName: "Mark Miller",
-  mass: 78,
-  height: 1.69,
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
+// const markMiller = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
 
-const johnSmith = {
-  fullName: "John Smith",
-  mass: 92,
-  height: 1.95,
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
+// const johnSmith = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
 
-markMiller.calcBMI();
-johnSmith.calcBMI();
+// markMiller.calcBMI();
+// johnSmith.calcBMI();
 
-console.log(markMiller.bmi, johnSmith.bmi);
+// console.log(markMiller.bmi, johnSmith.bmi);
 
-if (markMiller.bmi > johnSmith.bmi) {
-  console.log(
-    `${markMiller.fullName}'s BMI (${markMiller.bmi}) is higher than ${johnSmith.fullName} BMI (${johnSmith.bmi})`
-  );
-} else if (johnSmith.bmi > markMiller.bmi) {
-  console.log(
-    `${johnSmith.fullName}'s BMI (${johnSmith.bmi}) is higher than ${markMiller.fullName} BMI (${markMiller.bmi})`
-  );
+// if (markMiller.bmi > johnSmith.bmi) {
+//   console.log(
+//     `${markMiller.fullName}'s BMI (${markMiller.bmi}) is higher than ${johnSmith.fullName} BMI (${johnSmith.bmi})`
+//   );
+// } else if (johnSmith.bmi > markMiller.bmi) {
+//   console.log(
+//     `${johnSmith.fullName}'s BMI (${johnSmith.bmi}) is higher than ${markMiller.fullName} BMI (${markMiller.bmi})`
+//   );
+// }
+
+// console.log("Lifting weights repetition 1");
+// console.log("Lifting weights repetition 2");
+// console.log("Lifting weights repetition 3");
+// console.log("Lifting weights repetition 4");
+// console.log("Lifting weights repetition 5");
+// console.log("Lifting weights repetition 6");
+// console.log("Lifting weights repetition 7");
+// console.log("Lifting weights repetition 8");
+// console.log("Lifting weights repetition 9");
+// console.log("Lifting weights repetition 10");
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);
 }
