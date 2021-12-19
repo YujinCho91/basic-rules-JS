@@ -411,7 +411,7 @@ John weights 92 kg and is 1.95 m tall.
 //   console.log(`Lifting weights repetition ${rep}`);
 // }
 
-const jonasArray = [
+const jonas = [
   "Jonas",
   "Schmedtmann",
   2037 - 1991,
@@ -428,8 +428,36 @@ const types = [];
 // console.log(jonas[4])
 // jonas[5] does NOT exist
 
-for (let i = 0; i < jonasArray.length; i++) {
-  console.log(jonasArray[i], typeof jonasArray[i]);
+for (let i = 0; i < jonas.length; i++) {
+  //Reading from jonas array
+  console.log(jonas[i], typeof jonas[i]);
 
-  types[i] = typeof jonas[i];
+  //Filling types array
+  // types[i] = typeof jonas[i];
+  types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+console.log("--- ONLY STRINGS ---");
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] !== "string") continue;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log("--- BREAK WITH NUMBER ---");
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] === "number") break;
+
+  console.log(jonas[i], typeof jonas[i]);
 }
