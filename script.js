@@ -554,3 +554,5 @@ const calcAverage = function (arr) {
   return sum / arr.length;
 };
 console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage([4, 6, 5]));
+console.log(calcAverage([10, 20, 30]));
