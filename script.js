@@ -531,7 +531,7 @@ tips and totals arrays 😉 Bonus:
 4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
 4.3. Call the function with the 'totals' array */
 
-const bills = [2, 300, 200, 440, 37, 105, 10, 1100, 86, 52];
+const bills = [2, 300, 200, 400, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const totals = [];
 
@@ -555,4 +555,4 @@ const calcAverage = function (arr) {
 };
 console.log(calcAverage([3, 10, 17]));
 console.log(calcAverage([10, 20, 30]));
-console.log(calcAverage([300, 100, 200]));
+console.log(calcAverage([300, 100, 600]));
