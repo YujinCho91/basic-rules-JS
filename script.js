@@ -531,6 +531,7 @@ tips and totals arrays 😉 Bonus:
 4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
 4.3. Call the function with the 'totals' array */
 
+/*
 const bills = [2, 300, 200, 400, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const totals = [];
@@ -556,11 +557,11 @@ const calcAve = function (arr) {
 console.log(calcAve([3, 10, 17]));
 console.log(calcAve([10, 20, 30]));
 console.log(calcAve([300, 100, 600]));
-
+*/
 //PROBLEM1 :
 //We work for a company building a smart home thermometer. OUr most recent task is this:"Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
 
-const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+// const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 
 //1) Understanding the problem
 //-What is temperature amplitude? Answer: difference between highest and lowest temp
@@ -601,6 +602,7 @@ console.log(amplitude);
 //2) Breaking up into sub-problems
 //-Merge 2 arrays
 
+/*
 const calcTempAmplitude = function (t1, t2) {
   const temps = t1.concat(t2);
   console.log(temps);
@@ -621,3 +623,26 @@ const calcTempAmplitude = function (t1, t2) {
 
 const amplitudeNew = calcTempAmplitude([3, 5, 1], [9, 0, 1]);
 console.log(amplitudeNew);
+*/
+
+const measureKelvin = function () {
+  const measurement = {
+    type: "temp",
+    unit: "celsius",
+
+    //C) FIX
+    value: Number(prompt("Degrees celsius:")),
+  };
+
+  //B) FIND THE BUG
+  console.table(measurement);
+
+  // console.log(measurement.value);
+  // console.warn(measurement.value);
+  // console.error(measurement.value);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+//A) IDENTIFY
+console.log(measureKelvin());
